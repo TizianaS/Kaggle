@@ -1,0 +1,7 @@
+install.packages("randomForest")
+library(randomForest)
+setwd("~/Documents/Kaggle/Handwritten Digits/")
+datatrain<-read.csv("train.csv")
+datatest<-read.csv("test.csv")
+xt<-subset(datatrain,select=c(pixel0:pixel783))
+yt<-factor(datatrain$label)
